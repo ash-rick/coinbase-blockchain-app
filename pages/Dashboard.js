@@ -32,7 +32,10 @@ const Dashboard = ({ address }) => {
       const sdk = new ThirdwebSDK(
         new ethers.Wallet(
           process.env.NEXT_PUBLIC_METAMASK_KEY,
-          ethers.getDefaultProvider("https://rinkeby.infura.io/v3/")
+          // new ethers.providers.JsonRpcProvider("https://rinkeby.infura.io/v3/")
+          ethers.getDefaultProvider(
+            "https://rinkeby.infura.io/v3/4b4e91062d2f419a8cf552e4721eb7c6"
+          )
         )
       );
 

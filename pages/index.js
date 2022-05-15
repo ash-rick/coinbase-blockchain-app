@@ -3,7 +3,8 @@ import { useWeb3 } from '@3rdweb/hooks'
 import Dashboard from './Dashboard'
 
 export default function Home() {
-  const {address,connectWallet} = useWeb3()
+  const { address, connectWallet } = useWeb3();
+  console.log(address);
   return (
     <Wrapper>
       {address ? (
@@ -18,7 +19,7 @@ export default function Home() {
             <br /> able to run this app.
           </Details>
         </WalletConnect>
-      )}
+       )}
     </Wrapper>
   )
 }
@@ -58,20 +59,3 @@ const Details = styled.div`
   font-weight: 500;
   color: #282b2f;
 `
-
-{/* <Wrapper>
-      {
-        address ? (
-          <Dashboard address={address}/>
-        ):(
-          <WalletConnect>
-            <Button onClick={()=> connectWallet('injected')}>
-              Connect Wallet
-            </Button>
-            <Details>
-              You need Chrome to be
-              <br /> able to run this app.
-            </Details>
-          </WalletConnect>
-        )}
-    </Wrapper> */}
